@@ -113,7 +113,7 @@ public class SoulCrystal extends ItemBase implements IPermanentCrystal, Vanishab
 		int lostFragments = SuperpositionHandler.getPersistentInteger(player, "enigmaticlegacy.lostsoulfragments", 0);
 
 		if (lostFragments > 0) {
-			soulMap.put(Attributes.MAX_HEALTH, new AttributeModifier(UUID.fromString("66a2aa2d-7e3c-4af4-882f-bd2b2ded8e7b"), "Lost Soul Health Modifier", -2 * lostFragments, AttributeModifier.Operation.ADD_VALUE));
+			soulMap.put(Attributes.MAX_HEALTH, new AttributeModifier(UUID.fromString("66a2aa2d-7e3c-4af4-882f-bd2b2ded8e7b"), "Lost Soul Health Modifier", -2 * lostFragments, AttributeModifier.Operation.ADDITION));
 		}
 
 		// Applies new attributes
